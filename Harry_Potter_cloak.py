@@ -1,13 +1,9 @@
 import cv2
 import numpy
 
-
-#initial function for the callin of the trackbar
 def hello(x):
-	#only for referece
 	print("")
 
-#initialisation of the camera
 cap = cv2.VideoCapture(0)
 bars = cv2.namedWindow("bars")
 
@@ -18,20 +14,16 @@ cv2.createTrackbar("lower_hue","bars",68,180, hello)
 cv2.createTrackbar("lower_saturation","bars",55, 255, hello)
 cv2.createTrackbar("lower_value","bars",54, 255, hello)
 
-#Capturing the initial frame for creation of background
 while(True):
 	cv2.waitKey(1000)
 	ret,init_frame = cap.read()
-	#check if the frame is returned then brake
 	if(ret):
 		break
 
-# Start capturing the frames for actual magic!!
 while(True):
 	ret,frame = cap.read()
 	inspect = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-	#getting the HSV values for masking the cloak
+	
 	upper_hue = cv2.getTrackbarPos("upper_hue", "bars")
 	upper_saturation = cv2.getTrackbarPos("upper_saturation", "bars")
 	upper_value = cv2.getTrackbarPos("upper_value", "bars")
@@ -50,7 +42,6 @@ while(True):
 	mask_inv = 255-mask 
 	mask = cv2.dilate(mask,kernel,5)
 	
-	#The mixing of frames in a combination to achieve the required frame
 	b = frame[:,:,0]
 	g = frame[:,:,1]
 	r = frame[:,:,2]
@@ -69,7 +60,7 @@ while(True):
 
 	final = cv2.bitwise_or(frame_inv, blanket_area)
 
-	cv2.imshow("Harry's Cloak",final)
+	cv2.imshow("Magic Clok",final)
 
 	if(cv2.waitKey(3) == ord('q')):
 		break;
