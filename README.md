@@ -4,16 +4,19 @@ When You Are In Front Of Camera At The Moment Of Capturing It Will Not Work Prop
 If You Need A Higher Saturation Use The Bars To Change It
 
 Things You Need:
+
 Python 3.9 (Download Form Microsoft Store Or App Store)
 OpenCV
 Numpy
 
 How To Download OpenCV:
+
 Open Command Prompt
 Type:pip install opencv-python
 Press Enter
 
 How To Download Numpy:
+
 Open Command Prompt
 Type:pip install numpy
 Press Enter
