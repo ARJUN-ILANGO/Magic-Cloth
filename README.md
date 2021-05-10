@@ -5,20 +5,20 @@ If You Need A Higher Saturation Use The Bars To Change It
 
 Things You Need:
 
-Python 3.9 (Download Form Microsoft Store Or App Store)
-OpenCV
+Python 3.9 (Download Form Microsoft Store Or App Store),
+OpenCV And
 Numpy
 
 How To Download OpenCV:
 
-Open Command Prompt
-Type:pip install opencv-python
+Open Command Prompt And
+Type:pip install opencv-python And
 Press Enter
 
 How To Download Numpy:
 
-Open Command Prompt
-Type:pip install numpy
+Open Command Prompt And
+Type:pip install numpy And
 Press Enter
 
 
